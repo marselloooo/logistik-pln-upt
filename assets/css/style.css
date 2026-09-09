@@ -1,0 +1,289 @@
+/* =========================================================
+   CSS CUSTOM - Sistem Informasi Monitoring Persediaan Material
+   Warna utama: biru, putih, abu-abu
+   ========================================================= */
+
+:root {
+    --biru-utama: #1e5cb3;
+    --biru-tua: #14406e;
+    --biru-muda: #eaf1fb;
+    --abu-abu: #6c757d;
+    --abu-terang: #f4f6f9;
+    --border-color: #e3e6ea;
+}
+
+body {
+    background-color: var(--abu-terang);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #333;
+}
+
+/* ---------------- NAVBAR ATAS ---------------- */
+.navbar-top {
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.7rem 1.2rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.navbar-brand-text {
+    font-weight: 600;
+    color: var(--biru-tua);
+}
+
+.btn-toggle-sidebar {
+    border: 1px solid var(--border-color);
+    background: #fff;
+}
+
+/* ---------------- LAYOUT ---------------- */
+.app-wrapper {
+    display: flex;
+    min-height: calc(100vh - 60px);
+}
+
+/* ---------------- SIDEBAR ---------------- */
+.sidebar {
+    width: 240px;
+    background-color: var(--biru-tua);
+    color: #fff;
+    flex-shrink: 0;
+    min-height: calc(100vh - 60px);
+}
+
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 1.2rem 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.sidebar-logo i {
+    font-size: 1.8rem;
+    color: #ffffff;
+}
+
+.sidebar-logo-title {
+    font-weight: 600;
+    font-size: 0.95rem;
+    line-height: 1.2;
+}
+
+.sidebar-logo-sub {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.7);
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0.8rem 0;
+    margin: 0;
+}
+
+.sidebar-menu li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0.7rem 1.2rem;
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    font-size: 0.92rem;
+    border-left: 3px solid transparent;
+    transition: 0.15s;
+}
+
+.sidebar-menu li a:hover {
+    background-color: rgba(255,255,255,0.08);
+    color: #fff;
+}
+
+.sidebar-menu li a.active {
+    background-color: rgba(255,255,255,0.12);
+    border-left: 3px solid #ffffff;
+    color: #fff;
+    font-weight: 600;
+}
+
+/* ---------------- KONTEN UTAMA ---------------- */
+.main-content {
+    flex: 1;
+    padding: 1.5rem;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.page-title {
+    font-weight: 600;
+    color: var(--biru-tua);
+    margin-bottom: 1.2rem;
+}
+
+/* ---------------- CARD STATISTIK ---------------- */
+.card-stat {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    padding: 1.2rem;
+    background: #fff;
+    height: 100%;
+}
+
+.card-stat .stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: #fff;
+    background-color: var(--biru-utama);
+}
+
+.card-stat .stat-value {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--biru-tua);
+}
+
+.card-stat .stat-label {
+    font-size: 0.8rem;
+    color: var(--abu-abu);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+/* Variasi warna ikon card */
+.stat-icon.bg-danger-soft { background-color: #d9534f; }
+.stat-icon.bg-success-soft { background-color: #2e9e5b; }
+.stat-icon.bg-warning-soft { background-color: #e0a020; }
+.stat-icon.bg-info-soft { background-color: #2e93b3; }
+
+/* ---------------- CARD UMUM / PANEL ---------------- */
+.panel {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    padding: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+
+.panel-title {
+    font-weight: 600;
+    color: var(--biru-tua);
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+/* ---------------- TABEL ---------------- */
+.table thead {
+    background-color: var(--biru-muda);
+}
+
+.table thead th {
+    color: var(--biru-tua);
+    font-weight: 600;
+    font-size: 0.85rem;
+    border-bottom: none;
+}
+
+.table td, .table th {
+    vertical-align: middle;
+    font-size: 0.88rem;
+}
+
+/* ---------------- TOMBOL ---------------- */
+.btn-primary {
+    background-color: var(--biru-utama);
+    border-color: var(--biru-utama);
+}
+
+.btn-primary:hover {
+    background-color: var(--biru-tua);
+    border-color: var(--biru-tua);
+}
+
+.btn-outline-primary {
+    color: var(--biru-utama);
+    border-color: var(--biru-utama);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--biru-utama);
+    border-color: var(--biru-utama);
+}
+
+/* ---------------- BADGE STATUS ---------------- */
+.badge-aman {
+    background-color: #2e9e5b;
+    color: #fff;
+}
+
+.badge-menipis {
+    background-color: #e0a020;
+    color: #fff;
+}
+
+.badge-habis {
+    background-color: #d9534f;
+    color: #fff;
+}
+
+/* ---------------- LOGIN PAGE ---------------- */
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--biru-tua), var(--biru-utama));
+}
+
+.login-card {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    padding: 2.2rem;
+    width: 100%;
+    max-width: 380px;
+}
+
+.login-logo {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.login-logo i {
+    font-size: 2.6rem;
+    color: var(--biru-utama);
+}
+
+.login-logo h5 {
+    margin-top: 0.6rem;
+    font-weight: 700;
+    color: var(--biru-tua);
+}
+
+.login-logo p {
+    color: var(--abu-abu);
+    font-size: 0.82rem;
+    margin: 0;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 767px) {
+    .sidebar {
+        position: fixed;
+        left: -240px;
+        top: 60px;
+        z-index: 1050;
+        transition: 0.25s;
+        height: calc(100vh - 60px);
+    }
+    .sidebar.show {
+        left: 0;
+    }
+    .main-content {
+        padding: 1rem;
+    }
+}
